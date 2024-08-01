@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    background-color: #081b31;
+    color: #fff;
+    height: 5rem;
+    line-height: 5rem;
+}
+
+.choices {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    gap: 3rem; /* Adding gap between choice elements */
+}
+
+.choice {
+    height: 165px;
+    width: 165px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, opacity 0.3s; /* Smooth transition */
+}
+
+.choice:hover {
+    opacity: 0.5;
+    cursor: pointer;
+    background-color: grey;
+    transform: scale(1.1);
+}
+
+img {
+    height: 150px;
+    width: 150px;
+    object-fit: fill;
+    border-radius: 50%;
+    transition: margin-top 0.3s; /* Smooth transition */
+}
+
+/* Ensure image stays centered even on hover */
+.choice:hover img {
+    margin-top: 0; /* Adjust this value if needed to keep image centered */
+    transform: scale(1.1);
+
+}
+
+.score-board {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    gap: 5rem;
+    margin-top: 2rem;
+}
+.score {
+    animation: popIn 0.5s ease-in-out;
+}
+#user-score , #comp-score {
+    font-size: 4rem;
+    transition: transform 0.3s;
+}
+.msg-container {
+    margin-top: 4rem;
+}
+#msg {
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    margin-top: 2rem;
+    display: inline;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes popIn {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
